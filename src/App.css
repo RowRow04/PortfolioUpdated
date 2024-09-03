@@ -1,0 +1,112 @@
+.header {
+  background-image: url("your-image-url.jpg");
+}
+
+/* Dark mode styles */
+.dark {
+  background-color: #1a202c;
+  color: #cbd5e0; 
+}
+
+.dark button {
+  background-color: #4a5568;
+  color: #cbd5e0;
+}
+
+/* Light mode styles */
+.light {
+  background-color: #ffffff;
+  color: #1a202c;
+}
+
+.light button {
+  background-color: #cbd5e0;
+  color: #1a202c;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+.background {
+  background-attachment: fixed; /* pag stay lang ang image kapag mag scroll */
+  background-position: center; /* para mag center yung image */
+  background-repeat: no-repeat; /* para hindi umulit yung image  */
+  background-size: cover; /* para mag cover yung whole screen */
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.active {
+  opacity: 1;
+}
+
+.button-animation {
+  transition: background-color 0.3s ease;
+}
+
+.button-animation:hover {
+  background-color: #4a90e2; /* para mapalitan ang mga image hover */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.gradiant-text {
+  -webkit-background-clip: text;
+  @apply bg-gradient-to-t from-blue-500 to-cyan-500 text-transparent;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  animation: typing-text steps(40) 3s infinite, blink ease 0.3s infinite;
+  text-wrap: nowrap;
+  display: inline-block;
+  width: max-content;
+  width: 0;
+}
+
+@keyframes typing-text {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 350px;
+  }
+}
+
+@keyframes typing-text {
+  to {
+    border-color: transparent;
+  }
+}
+
+.skill-card {
+  transition: 0.3s; /* maglalagay ng transition para hover efect*/
+
+  box-shadow: 0 4px 8px 0 #3b82f6; /* para mag add ng shadow effect */
+}
+
+.skill-card:hover {
+  box-shadow: 0 30px 25px 0 #3b82f6; /* para mag add ng shadow effet */
+}
+
+
